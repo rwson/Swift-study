@@ -49,3 +49,33 @@ print(-num2);
 
 print(num + 5);
 print(num - 6);
+
+//  3:比较运算 (==/!=/>/</>=/<=)
+//  用(===/!===)比较类的实例
+
+let welcome = "welcome to Swift!";
+
+if(welcome == "welcome to Swift!"){
+    print("welcome");
+} else {
+    print("你不喜欢Swift!");
+}
+
+//  三目运算(if...else...的缩写)
+var member = true;
+let price = 500;
+let addPrice = 20;
+let addPriceMem = -10;
+
+var finalPrice = price + (member ? addPriceMem : addPriceMem);
+print(finalPrice);
+
+//  4:区间运算符(闭区间/开区间)
+
+for index in 1...5 {
+    print("\(index) times 5 is \(index * 5)")
+}
+
+var groupMangers = ["群主","管理员1","管理员2","管理员3","管理员4"];
+var groupLength = groupMangers.count;
+
