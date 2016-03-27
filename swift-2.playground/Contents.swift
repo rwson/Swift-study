@@ -153,3 +153,6 @@ if let name = optionalName {
 let strings:String! = "5";
 print("print out: \(strings)");
 
+//  在检查一个值是nil类型的时候,就用普通拆包
+//  一直是有值的时候就用间接拆包
+
