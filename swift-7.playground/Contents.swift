@@ -43,7 +43,7 @@ for (var i = 0;i < 3;i += 1) {
     print(i);
 }
 
-//  3:while循环/do...while循环(用于不知道循环次数有多少次的)
+//  3:while循环/repeat...while循环(用于不知道循环次数有多少次的)
 
 var steps = 25;
 var panel = [Int](count:steps + 1,repeatedValue:0);
@@ -64,28 +64,47 @@ panel[19] = -11;
 panel[22] = -02;
 panel[24] = -08;
 
-while(cur < steps) {
-    times += 1;
-    ++color;
-    if(color == 7){
-        color = 1;
-    }
-    cur += color;
-    if(cur < panel.count) {
-        var move = panel[cur];
-        cur += move;
-        
-        if(move > 0){
-            print("遇到云梯,前进\(move)步");
-        } else if(move < 0){
-            print("遇到蛇,后退\(-move)步");
-        } else {
-            print("正常走了");
+//while(cur < steps) {
+//    times += 1;
+//    ++color;
+//    if(color == 7){
+//        color = 1;
+//    }
+//    cur += color;
+//    if(cur < panel.count) {
+//        var move = panel[cur];
+//        cur += move;
+//        
+//        if(move > 0){
+//            print("遇到云梯,前进\(move)步");
+//        } else if(move < 0){
+//            print("遇到蛇,后退\(-move)步");
+//        } else {
+//            print("正常走了");
+//        }
+//    }
+//}
+//
+//print("游戏过关!共用了\(times)步");
+
+repeat {
+        times += 1;
+        ++color;
+        if(color == 7){
+            color = 1;
         }
-    }
-}
-
+        cur += color;
+        if(cur < panel.count) {
+            var move = panel[cur];
+            cur += move;
+    
+            if(move > 0){
+                print("遇到云梯,前进\(move)步");
+            } else if(move < 0){
+                print("遇到蛇,后退\(-move)步");
+            } else {
+                print("正常走了");
+            }
+        }
+} while(cur < steps)
 print("游戏过关!共用了\(times)步");
-
-
-
