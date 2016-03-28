@@ -103,4 +103,14 @@ if (!bool2) {
     print("反出来为真");
 }
 
+//  6:选并操作符
+//  情景:入手一部手机,有理想机型和最差机型,比如原来我的理想机型还没定下来,就用选并来在两个机子里面取一个
+//  在理想机型没定的情况下,就入手最次机型,理想机型定了,就入手理想机型
+let wrost = "小米5";
+var best:String?;
+//  best = "iPhone 7";
+
+var realHave = (best ?? wrost);
+print(realHave);
+
 
