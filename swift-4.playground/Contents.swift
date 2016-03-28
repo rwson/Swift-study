@@ -73,9 +73,34 @@ print(finalPrice);
 //  4:区间运算符(闭区间/开区间)
 
 for index in 1...5 {
-    print("\(index) times 5 is \(index * 5)")
+    print("\(index) times 5 is \(index * 5)");
 }
 
-var groupMangers = ["群主","管理员1","管理员2","管理员3","管理员4"];
-var groupLength = groupMangers.count;
+let names = ["小宋", "小明", "小李", "小黄"]
+for name in names {
+    print("Hello, \(name)!")
+}
+
+let namesCount = names.count;
+for index in 0 ..< namesCount {
+    print("第\(index + 1)项是: \(names[index])");
+}
+
+//  5:逻辑运算(与/或/非)
+
+let bool1 = true;
+let bool2 = false;
+
+if (bool1 && bool2) {
+    print("同时满足");
+}
+
+if (bool1 || bool2) {
+    print("只满足一个");
+}
+
+if (!bool2) {
+    print("反出来为真");
+}
+
 
